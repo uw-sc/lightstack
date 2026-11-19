@@ -91,7 +91,7 @@ Defaults target the single-node stub MVP. "Mode" = where the value applies.
 | `secrets.jwtSecret` | `""` **(required)** | all | token signing secret |
 | `secrets.adminUser` | `admin` | all | admin account name |
 | `secrets.adminPassword` | `""` **(required)** | all | admin password (no `admin/secret`) |
-| `secrets.existingSecret` | `""` | all | pre-rendered Secret with a `lightstack.yaml` key (GitOps); see [UPGRADING](../../docs/UPGRADING.md) when upgrading an existing one |
+| `secrets.existingSecret` | `""` | all | pre-rendered Secret with a `lightstack.yaml` key (GitOps) |
 
 > Config (including credentials) is rendered into a **Secret** mounted at the binary's
 > `--config` path — the binary has no per-key env override for most settings, so they are
@@ -137,7 +137,7 @@ Defaults target the single-node stub MVP. "Mode" = where the value applies.
 | `realMode.privileged` / `hostNetwork` | `false` | real | host-level access |
 | `realMode.libvirtSocketPath` | `/var/run/libvirt/libvirt-sock` | real | host libvirtd socket; pods mount its directory (hostPath), so a re-created socket stays reachable |
 | `realMode.hostStoragePath` | `/var/lib/lightstack` | real | node-local VM/volume/image data (hostPath); mounted at the same path and passed to the binary as `state_path` — absolute |
-| `realMode.legacyStatePath` | `""` | real | pre-rename root to migrate into `hostStoragePath` once; empty renders nothing ([UPGRADING](../../docs/UPGRADING.md)) |
+| `realMode.legacyStatePath` | `""` | real | pre-rename root to migrate into `hostStoragePath` once; empty renders nothing |
 | `realMode.floatingIpPool` | `""` | real | operator pool routed to nodes (FR-009c) |
 | `podSecurity.applyPrivilegedNamespaceLabel` | `false` | real | label the namespace `privileged` (FR-012d) |
 

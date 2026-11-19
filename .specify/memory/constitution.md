@@ -34,6 +34,8 @@ Runtime guidance updated in the repo:
     FR-036a); the project structure lists v1.4.0.
   - docs/UPGRADING.md ("Volumes interrupted by a restart") — interrupted reservations turn `error`
     at the next start or by the periodic pass, and keep their backing until they are deleted.
+    (That section was removed on 2026-11-19, when UPGRADING.md became one section per release;
+    docs/ARCHITECTURE.md, "No transaction around external work", describes the behaviour.)
 
 Follow-up TODOs:
   - ⚠ CLAUDE.md "The Nine Articles (Constitution)" and .claude/memory/constitution.md (v1.0,
