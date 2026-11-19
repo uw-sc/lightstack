@@ -137,7 +137,6 @@ Defaults target the single-node stub MVP. "Mode" = where the value applies.
 | `realMode.privileged` / `hostNetwork` | `false` | real | host-level access |
 | `realMode.libvirtSocketPath` | `/var/run/libvirt/libvirt-sock` | real | host libvirtd socket; pods mount its directory (hostPath), so a re-created socket stays reachable |
 | `realMode.hostStoragePath` | `/var/lib/lightstack` | real | node-local VM/volume/image data (hostPath); mounted at the same path and passed to the binary as `state_path` — absolute |
-| `realMode.legacyStatePath` | `""` | real | pre-rename root to migrate into `hostStoragePath` once; empty renders nothing |
 | `realMode.floatingIpPool` | `""` | real | operator pool routed to nodes (FR-009c) |
 | `podSecurity.applyPrivilegedNamespaceLabel` | `false` | real | label the namespace `privileged` (FR-012d) |
 
